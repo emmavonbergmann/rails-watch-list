@@ -1,0 +1,15 @@
+<div class="badge bg-dark font-monospace text-wrap" style="width: cover;">
+<h1 class="text-uppercase fw-light fs-1">All lists</h1>
+</div>
+<br>
+<div>
+<ul class="list-group list-group-flush">
+<% @lists.each do |list| %>
+<li class="list-group-item text-decoration-none font-monospace fw-light"><%= link_to "#{list.name}", list %></li>
+<% end %>
+</ul>
+</div>
+
+<div class= "btn btn-dark text-decoration-none font-monospace fw-light">
+<%= link_to "add a list", new_list_path %>
+</div>
