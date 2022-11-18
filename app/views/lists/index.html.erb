@@ -1,17 +1,4 @@
 
-<h1 id="all" >All lists</h1>
-<br>
-
-<ul>
-<% @lists.each do |list| %>
-<li ><%= link_to "#{list.name}", list %></li>
-<% end %>
-</ul>
-
-<%= link_to "add a list", new_list_path %>
-
-
-
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1623179007436-1d366e78ba68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);">
   <div class="container">
     <h1 class="text-center fs-1">Save any kinds of movies</h1>
@@ -36,6 +23,3 @@
     </div>
   <% end %>
 </div>
-
-
-
