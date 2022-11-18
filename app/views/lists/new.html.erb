@@ -1,6 +1,8 @@
 <h1>new list</h1>
 <%= simple_form_for @list do |f| %>
 <%= f.input :name %>
+<%= f.input :photo, as: :file %>
 <%= f.submit "create list" %>
 <% end %>
 <%= link_to "back to all lists", lists_path %>
+heroku run rails db:migrate  # Run pending migrations in production

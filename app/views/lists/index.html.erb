@@ -1,15 +1,41 @@
-<div class="badge bg-dark font-monospace text-wrap" style="width: cover;">
-<h1 class="text-uppercase fw-light fs-1">All lists</h1>
-</div>
+
+<h1 id="all" >All lists</h1>
 <br>
-<div>
-<ul class="list-group list-group-flush">
+
+<ul>
 <% @lists.each do |list| %>
-<li class="list-group-item text-decoration-none font-monospace fw-light"><%= link_to "#{list.name}", list %></li>
+<li ><%= link_to "#{list.name}", list %></li>
 <% end %>
 </ul>
+
+<%= link_to "add a list", new_list_path %>
+
+
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1623179007436-1d366e78ba68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);">
+  <div class="container">
+    <h1 class="text-center fs-1">Save any kinds of movies</h1>
+    <p class="text-center fs-2">Create individual movie lists according to categories</p>
+    <div class="text-center">
+      <div class=" btn btn-outline-light">
+          <%= link_to "add a new list", new_list_path, class:"text-decoration-none text-white"%>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class= "btn btn-dark text-decoration-none font-monospace fw-light">
-<%= link_to "add a list", new_list_path %>
+<div id="flex">
+  <% @lists.each do |list| %>
+    <div class="card-trip">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= link_to "#{list.name}", list, class:" btn btn-outline-light text-decoration-none text-black"  %></h2>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
+
+
+
